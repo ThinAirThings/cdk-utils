@@ -11,3 +11,12 @@ export const createOutput = (scope: Construct, name: string, value: string) => {
         exportName: `${process.env.PROJECT_NAME}:${isProd()?'PROD:':'DEV:'}${name}`
     } )
 }
+
+export const keyMap = <O extends {[key: string]: any}>(obj: O, mapFn: (key: string)=>string): {[key:string]: O extends {[key: string]: infer P}? P : never} => 
+    Object.fromEntries(
+        Object.keys(obj).map((key: string) => {
+            return [mapFn(key), obj[key]]
+        })
+    )
+
+export type Override<T extends object, K extends { [P in keyof T]?: any }> = Omit<T, keyof K> & K;
