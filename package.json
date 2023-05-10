@@ -2,8 +2,8 @@
   "name": "@thinairthings/cdk-utils",
   "version": "1.0.1",
   "description": "AWS CDK Utility Library",
-  "main": "dist/cdk-utils/src/index.js",
-  "types": "dist/cdk-utils/src/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/ThinAirThings/cdk-utils.git"
