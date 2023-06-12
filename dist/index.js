@@ -1,9 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.keyMap = exports.createOutput = exports.isProd = exports.restApiHandler = void 0;
+exports.keyMap = exports.createOutput = exports.isProd = void 0;
 const aws_cdk_lib_1 = require("aws-cdk-lib");
-var restApiHandler_1 = require("./restApiHandler/restApiHandler");
-Object.defineProperty(exports, "restApiHandler", { enumerable: true, get: function () { return restApiHandler_1.restApiHandler; } });
 const isProd = () => {
     return process.env.NODE_ENV === "prod";
 };

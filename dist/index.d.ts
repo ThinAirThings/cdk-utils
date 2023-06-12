@@ -1,5 +1,4 @@
 import { Construct } from 'constructs';
-export { restApiHandler } from './restApiHandler/restApiHandler';
 export declare const isProd: () => boolean;
 export declare const createOutput: (scope: Construct, name: string, value: string) => void;
 export declare const keyMap: <O extends {
